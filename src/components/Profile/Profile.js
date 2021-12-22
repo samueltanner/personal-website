@@ -1,13 +1,18 @@
-import Card from "./Card";
+import Card from "../UI/Card";
+import ProfileCard from "./ProfileCard";
 import ProfileImage from "./ProfileImage";
+
+import { profile } from "../../utils/constants";
 
 const Profile = (props) => {
   return (
-    <div className="bg-slate-100 p-3 rounded-lg drop-shadow-lg h-1/2">
+    <Card className="bg-slate-200 drop-shadow-lg">
       <ProfileImage />
       <br></br>
-      <Card title="sam tanner" body="software developer" />
-    </div>
+      <ProfileCard profile={profile} className="bg-slate-500" />
+      {/* <ProfileCard title="sam tanner" body="software developer" className="bg-slate-500" />
+      <ProfileCard title="sam tanner" body="software developer" className="bg-slate-500" /> */}
+    </Card>
   );
 };
 

@@ -7,8 +7,8 @@ import { profile } from "../../utils/constants";
 const Profile = (props) => {
   return (
     <Card className="bg-slate-200 drop-shadow-lg h-1/2">
-      <ProfileImage className="m-2" />
-      <ProfileCard profile={profile} className="bg-slate-500 " />
+      <ProfileImage />
+      <ProfileCard profile={profile} className="bg-slate-500" />
     </Card>
   );
 };

@@ -33,9 +33,10 @@ let JOBS = [
     start_date: "December 2020",
     end_date: "May 2021",
     activities: [
-      "Taught students how to ideate, architect, iterate, and build RESTful CRUD web applications",
-      "Focused on teaching proficiency in Ruby, Rails, Javascript, VueJS, and PostgreSQL",
-      "Held private office hours to help students learn new topics or round-out understanding of concepts covered in class",
+      "Learned fundamentals and best practices in full-stack web development in areas of project architecture, backend, frontend, and how to effectively self-teach new technologies",
+      "Generated technical requirements and determined the most effective solutions, created wireframes, designed schema, and researched outside resources",
+      "Built and tested the backend, incorporating external APIs",
+      "Created pages and RESTful routes, made web requests to retrieve data, formatted and styled results, incorporated libraries and themes",
     ],
   },
   {
@@ -128,7 +129,7 @@ const PROFILE = {
   email: "samuel.m.s.tanner@gmail.com",
   title: "Web Developer",
   blurb:
-    "Entrepreneur and software developer.  I've started and worked for startups because they are endless sources of excitement; they allow me to learn and grow.",
+    "Entrepreneur and software developer. I've started and worked for startups because they are endless sources of excitement; they allow me to learn and grow.",
 };
 
 export const jobs = JOBS;

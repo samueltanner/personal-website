@@ -3,7 +3,7 @@ import Card from "../UI/Card";
 const ProfileCard = (props) => {
   return (
     // <Card className={`bg-slate-400 ${props.className}`}>
-    <Card className="bg-slate-100">
+    <Card className="bg-slate-100 text-sm overflow-y-scroll h-1/2">
       <ul>
         <li>{props.profile.name}</li>
         <li>{props.profile.email}</li>

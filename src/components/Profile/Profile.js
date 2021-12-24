@@ -6,9 +6,13 @@ import { profile } from "../../utils/constants";
 
 const Profile = (props) => {
   return (
-    <Card className="bg-slate-200 drop-shadow-lg h-1/2">
+    <Card className="bg-slate-200 drop-shadow-lg h-2/5">
       <ProfileImage className="" />
-      <ProfileCard profile={profile} className="bg-slate-500" />
+      <div className="flex flex-wrap">
+        <p className="font-bold ml-2">{profile.name}</p>
+        <p className="italic ml-2"> | {profile.title}</p>
+      </div>
+      <p className=" ml-2">"{profile.blurb}"</p>
     </Card>
   );
 };

@@ -6,7 +6,7 @@ import ContactContainer from "../../ConactBar/ContactContainer";
 
 const Profile = (props) => {
   return (
-    <Card className="relative bg-slate-200 drop-shadow-lg sm:h-1/2 md:h-1/3">
+    <Card className="relative bg-slate-200 drop-shadow-lg sm:h-1/2 ">
       <ProfileImage />
       <div className="flex flex-wrap">
         <p className="font-bold ml-2">{profile.name}</p>

@@ -132,5 +132,11 @@ const PROFILE = {
     "Entrepreneur and software developer. I've started and worked for startups because they are endless sources of excitement; they allow me to learn and grow.",
 };
 
+const LINKS = {
+  mail: "mail",
+  linkedIn: "https://www.linkedin.com/in/samueltanner/",
+  github: "https://github.com/samueltanner",
+};
 export const jobs = JOBS;
 export const profile = PROFILE;
+export const links = LINKS;

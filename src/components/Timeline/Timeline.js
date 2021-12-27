@@ -7,9 +7,16 @@ const Timeline = (props) => {
   return (
     <div className="">
       <VerticalLine>
-        <AddJobCard />
+        <AddJobCard toggleContact={props.toggleContact} />
         {jobs.map((job, index) => (
-          <JobCard job={job} key={index} index={index} selectJob={props.selectJob} className="cursor-default" />
+          <JobCard
+            job={job}
+            key={index}
+            index={index}
+            selectJob={props.selectJob}
+            className="cursor-default"
+            toggleContact={props.toggleContact}
+          />
         ))}
       </VerticalLine>
     </div>

@@ -12,8 +12,8 @@ const Profile = (props) => {
         <p className="font-bold ml-2">{profile.name}</p>
         <p className="italic ml-2"> | {profile.title}</p>
       </div>
-      <p className=" ml-2 mb-12">"{profile.blurb}"</p>
-      <ContactContainer className="" />
+      <p className=" mx-2 mb-12">"{profile.blurb}"</p>
+      <ContactContainer toggleContact={props.toggleContact} showContactCard={props.showContactCard} />
     </Card>
   );
 };

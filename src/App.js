@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="h-screen bg-grey md:flex gap-0">
       <div className="flex flex-col p-2 md:w-1/2">
-        <Profile className="h-1/2" />
+        <Profile />
         <JobCard currentJob={job} />
       </div>
       <div className="mt-3 md:mt-0 flex-1 flex overflow-hidden pt-2">

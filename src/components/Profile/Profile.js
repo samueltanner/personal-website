@@ -6,14 +6,14 @@ import ContactContainer from "../../ConactBar/ContactContainer";
 
 const Profile = (props) => {
   return (
-    <Card className="bg-slate-200 drop-shadow-lg h-2/5 relative">
-      <ProfileImage className="" />
+    <Card className="relative bg-slate-200 drop-shadow-lg sm:h-1/2 md:h-1/3">
+      <ProfileImage />
       <div className="flex flex-wrap">
         <p className="font-bold ml-2">{profile.name}</p>
         <p className="italic ml-2"> | {profile.title}</p>
       </div>
-      {/* <p className=" ml-2">"{profile.blurb}"</p> */}
-      <ContactContainer className="bottom" />
+      <p className=" ml-2 mb-12">"{profile.blurb}"</p>
+      <ContactContainer className="" />
     </Card>
   );
 };

@@ -7,7 +7,8 @@ const Timeline = (props) => {
   return (
     <div className="">
       <VerticalLine>
-        <AddJobCard toggleContact={props.toggleContact} />
+        {!props.showContactCard ? <AddJobCard toggleContact={props.toggleContact} /> : null}
+
         {jobs.map((job, index) => (
           <JobCard
             job={job}

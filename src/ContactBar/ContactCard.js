@@ -32,7 +32,7 @@ const ContactCard = (props) => {
   };
 
   return (
-    <Card className="bg-slate-200 drop-shadow-lg ">
+    <Card className="bg-slate-200 drop-shadow-lg h-1/2 relative">
       <form className="flex flex-col" onSubmit={handleSubmitForm}>
         <label>Name:</label>
         <input type="text" onChange={handleChangeName} value={name} className="input-primary" required />
@@ -43,13 +43,14 @@ const ContactCard = (props) => {
         <label>Message:</label>
         <textarea
           type="text"
-          rows="6"
+          rows="7"
           onChange={handleChangeMessage}
           value={message}
           className="input-primary"
           required
         />
-        <div className="flex mx-auto gap-2">
+        {/* <div className="fixed bottom-3 inset-x-0 flex flex-wrap justify-center gap-4"> */}
+        <div className="flex flex-wrap mt-auto gap-2 mx-auto align-baseline">
           <RectangleButton text="Submit" buttonType={`bg-blue-500  hover:bg-blue-700 drop-shadow-md`} />
           <RectangleButton
             text="Cancel"

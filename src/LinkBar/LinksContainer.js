@@ -8,7 +8,7 @@ const LinksContainer = (props) => {
   };
 
   return (
-    <div className="absolute bottom-3 inset-x-0 flex flex-wrap justify-center gap-4">
+    <div className="fixed bottom-3 inset-x-0 flex flex-wrap justify-center gap-4">
       {props.showContactCard ? (
         <SquareButton icon={<ViewListIcon className="h-5 w-5 " />} onClick={props.toggleContact} />
       ) : (

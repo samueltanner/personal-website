@@ -6,8 +6,8 @@ const JobCard = (props) => {
   };
 
   const onSelectJob = () => {
-    // console.log(props.index);
-    props.toggleContact();
+    if (props.showContactCard) props.toggleContact();
+
     props.selectJob(props.index);
   };
 

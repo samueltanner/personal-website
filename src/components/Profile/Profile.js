@@ -2,7 +2,7 @@ import Card from "../UI/Card";
 import ProfileImage from "./ProfileImage";
 
 import { profile } from "../../utils/constants";
-import ContactContainer from "../../ConactBar/LinksContainer";
+import ContactContainer from "../../LinkBar/LinksContainer";
 
 const Profile = (props) => {
   return (

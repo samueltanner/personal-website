@@ -17,6 +17,7 @@ const Timeline = (props) => {
             selectJob={props.selectJob}
             className="cursor-default"
             toggleContact={props.toggleContact}
+            showContactCard={props.showContactCard}
           />
         ))}
       </VerticalLine>

@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="h-screen bg-grey md:flex gap-0">
-      <div className="flex flex-col p-2 md:w-1/2">
+      <div className="flex flex-col p-2 md:w-1/2" id="job_card">
         <Profile toggleContact={toggleContact} showContactCard={showContactCard} />
         {showContactCard ? <ContactCard toggleContact={toggleContactCard} /> : <JobCard currentJob={job} />}
       </div>

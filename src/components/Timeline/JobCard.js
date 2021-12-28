@@ -1,3 +1,5 @@
+import { Link, animateScroll as scroll } from "react-scroll";
+
 const JobCard = (props) => {
   const direction = () => {
     let response = "";
@@ -12,9 +14,15 @@ const JobCard = (props) => {
   };
 
   return (
-    <div
+    <Link
       className={`mb-8 flex justify-between items-center w-full right-timeline group ${direction()}`}
       onClick={onSelectJob}
+      activeClass="active"
+      to="job_card"
+      spy={true}
+      smooth={true}
+      offset={-70}
+      duration={500}
     >
       <div className="order-1 w-5/12"></div>
       {/* <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full "> */}
@@ -27,7 +35,7 @@ const JobCard = (props) => {
           {props.job.company}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 

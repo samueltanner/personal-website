@@ -1,7 +1,7 @@
 import SquareButton from "../components/UI/SquareButton";
 import { MailIcon, TerminalIcon, UserCircleIcon, ViewListIcon } from "@heroicons/react/outline";
 import { links } from "../utils/constants";
-const ContactContainer = (props) => {
+const LinksContainer = (props) => {
   const openLinkInNewTab = (url) => {
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");
     if (newWindow) newWindow.opener = null;
@@ -30,4 +30,4 @@ const ContactContainer = (props) => {
   );
 };
 
-export default ContactContainer;
+export default LinksContainer;

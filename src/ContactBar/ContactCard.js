@@ -43,8 +43,13 @@ const ContactCard = (props) => {
         <label>Message:</label>
         <textarea type="text" rows="6" onChange={handleChangeMessage} value={message} required />
         <div className="flex mx-auto gap-2">
-          <RectangleButton text="Submit" buttonType="primary" />
-          <RectangleButton text="Cancel" buttonType="warning" type="button" onClick={handleCancel} />
+          <RectangleButton text="Submit" buttonType={`bg-blue-500  hover:bg-blue-700 drop-shadow-md`} />
+          <RectangleButton
+            text="Cancel"
+            buttonType={`bg-red-400  hover:bg-red-500 drop-shadow-md`}
+            type="button"
+            onClick={handleCancel}
+          />
         </div>
       </form>
     </Card>

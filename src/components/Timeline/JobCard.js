@@ -18,7 +18,7 @@ const JobCard = (props) => {
       className={`mb-8 flex justify-between items-center w-full right-timeline group ${direction()}`}
       onClick={onSelectJob}
       activeClass="active"
-      to="job_card"
+      to="profile"
       spy={true}
       smooth={true}
       offset={-70}

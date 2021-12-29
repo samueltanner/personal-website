@@ -26,10 +26,10 @@ const JobCard = (props) => {
     >
       <div className="order-1 w-5/12"></div>
       {/* <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full "> */}
-      <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full group-hover:bg-gray-600">
+      <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
         <h1 className="mx-auto font-semibold text-lg text-white cursor-default">{props.index + 1}</h1>
       </div>
-      <div className="order-1 bg-slate-400 rounded-lg shadow-xl w-5/12 px-3 py-4 group-hover:bg-slate-200">
+      <div className="order-1 bg-slate-400 rounded-lg shadow-xl w-5/12 px-3 py-4 hover:bg-slate-200">
         <h3 className="mb-3 font-bold text-gray-800 text-l cursor-default">{props.job.title}</h3>
         <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100 cursor-default">
           {props.job.company}

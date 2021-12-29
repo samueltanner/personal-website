@@ -128,8 +128,7 @@ const PROFILE = {
   phone: "360.878.0730",
   email: "samuel.m.s.tanner@gmail.com",
   title: "Web Developer",
-  blurb:
-    "Entrepreneur and software developer. I've started and worked for startups because they are endless sources of excitement; they allow me to learn and grow.",
+  blurb: "Entrepreneur and developer. I love turning neat ideas into beautiful realities.",
 };
 
 const LINKS = {

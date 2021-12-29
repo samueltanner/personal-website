@@ -53,6 +53,7 @@ const ContactCard = (props) => {
         setToastMessage("Error in sending email");
         setShowToast(!showToast);
       });
+    // setShowToast(!showToast);
 
     setName("");
     setEmail("");

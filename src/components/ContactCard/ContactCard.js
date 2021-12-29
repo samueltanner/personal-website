@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { send } from "emailjs-com";
 import Card from "../UI/Card";
 import RectangleButton from "../UI/RectangleButton";

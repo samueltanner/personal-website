@@ -3,7 +3,7 @@ import "./App.css";
 import JobCard from "./components/JobDescription/JobCard";
 import Profile from "./components/Profile/Profile";
 import Timeline from "./components/Timeline/Timeline";
-import ContactCard from "./ContactBar/ContactCard";
+import ContactCard from "./components/ContactCard/ContactCard";
 
 function App() {
   const [job, setCurrentJob] = useState(0);

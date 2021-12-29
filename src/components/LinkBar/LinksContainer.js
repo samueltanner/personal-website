@@ -1,6 +1,6 @@
-import SquareButton from "../components/UI/SquareButton";
+import SquareButton from "../UI/SquareButton";
 import { MailIcon, TerminalIcon, UserCircleIcon, ViewListIcon } from "@heroicons/react/outline";
-import { links } from "../utils/constants";
+import { links } from "../../utils/constants";
 const LinksContainer = (props) => {
   const openLinkInNewTab = (url) => {
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");

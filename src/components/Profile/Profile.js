@@ -2,7 +2,7 @@ import Card from "../UI/Card";
 import ProfileImage from "./ProfileImage";
 
 import { profile } from "../../utils/constants";
-import ContactContainer from "../../LinkBar/LinksContainer";
+import LinksContainer from "../LinkBar/LinksContainer";
 
 const Profile = (props) => {
   return (
@@ -13,7 +13,7 @@ const Profile = (props) => {
         <p className="italic ml-2"> | {profile.title}</p>
       </div>
       <p className=" mx-2 mb-12">"{profile.blurb}"</p>
-      <ContactContainer toggleContact={props.toggleContact} showContactCard={props.showContactCard} />
+      <LinksContainer toggleContact={props.toggleContact} showContactCard={props.showContactCard} />
     </Card>
   );
 };

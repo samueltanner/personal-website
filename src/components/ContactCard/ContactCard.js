@@ -1,13 +1,16 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { send } from "emailjs-com";
-import Card from "../components/UI/Card";
-import RectangleButton from "../components/UI/RectangleButton";
+import Card from "../UI/Card";
+import RectangleButton from "../UI/RectangleButton";
+import EmailResponseMessage from "./EmailResponseMessage";
 
 const ContactCard = (props) => {
   const form = useRef();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
 
   const handleChangeName = (event) => {
     // console.log(event.target.value);
@@ -18,6 +21,10 @@ const ContactCard = (props) => {
   };
   const handleChangeMessage = (event) => {
     setMessage(event.target.value);
+  };
+
+  const handleShowToast = () => {
+    setShowToast(!showToast);
   };
 
   const handleSubmitForm = (event) => {
@@ -37,17 +44,19 @@ const ContactCard = (props) => {
       process.env.REACT_APP_EMAIL_USER_ID
     )
       .then((result) => {
-        console.log(result);
+        console.log("success");
+        setToastMessage("Successfully sent email");
+        setShowToast(!showToast);
       })
       .catch((error) => {
-        console.log(error);
+        console.log("error");
+        setToastMessage("Error in sending email");
+        setShowToast(!showToast);
       });
 
     setName("");
     setEmail("");
     setMessage("");
-
-    console.log(name, email, message);
   };
 
   const handleCancel = () => {
@@ -84,6 +93,16 @@ const ContactCard = (props) => {
           />
         </div>
       </form>
+
+      {showToast ? (
+        <div className="absolute inset-0 flex justify-center items-center z-10">
+          <EmailResponseMessage
+            text={toastMessage}
+            toggleContact={props.toggleContact}
+            handleShowToast={handleShowToast}
+          />
+        </div>
+      ) : null}
     </Card>
   );
 };

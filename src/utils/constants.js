@@ -98,7 +98,7 @@ let JOBS = [
     ],
   },
   {
-    company: "University of Washington School of Music",
+    company: "UW School of Music",
     title: "Student Visual & Audio Archiver",
     description: "",
     start_date: "October 2013",

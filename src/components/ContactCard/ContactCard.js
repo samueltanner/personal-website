@@ -13,7 +13,6 @@ const ContactCard = (props) => {
   const [toastMessage, setToastMessage] = useState("");
 
   const handleChangeName = (event) => {
-    // console.log(event.target.value);
     setName(event.target.value);
   };
   const handleChangeEmail = (event) => {
@@ -44,12 +43,10 @@ const ContactCard = (props) => {
       process.env.REACT_APP_EMAIL_USER_ID
     )
       .then((result) => {
-        console.log("success");
         setToastMessage("Successfully sent email");
         setShowToast(!showToast);
       })
       .catch((error) => {
-        console.log("error");
         setToastMessage("Error in sending email");
         setShowToast(!showToast);
       });

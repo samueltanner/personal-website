@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 
 const EmailResponseMessage = (props) => {
-  console.log("contact");
-
   useEffect(() => {
     let toastCountdown = setTimeout(() => props.handleShowToast(), 5000);
     return () => {

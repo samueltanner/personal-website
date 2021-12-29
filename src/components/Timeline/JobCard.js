@@ -21,7 +21,7 @@ const JobCard = (props) => {
       to="profile"
       spy={true}
       smooth={true}
-      offset={-70}
+      offset={300}
       duration={500}
     >
       <div className="order-1 w-5/12"></div>

@@ -23,8 +23,8 @@ function App() {
         {showContactCard ? <ContactCard toggleContact={toggleContactCard} /> : <JobCard currentJob={job} />}
         <FooterMenuCard className="visible md:hidden mx-1 mt-1" />
       </div>
-      <div className=" mt-3 md:mt-0 flex-1 flex overflow-hidden pt-2">
-        <div className="relative md:flex-1 mx-auto overflow-y-scroll ">
+      <div className="mt-3 md:mt-0 flex-1 flex overflow-hidden pt-0">
+        <div className="relative md:flex-1 mx-auto overflow-y-scroll p-0 ">
           <Timeline selectJob={selectJob} toggleContact={toggleContact} showContactCard={showContactCard} />
         </div>
       </div>

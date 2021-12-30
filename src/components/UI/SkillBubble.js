@@ -14,7 +14,9 @@ const SkillBubble = (props) => {
     }
   };
 
-  return <div className={`${color(props.skill.score)} rounded-3xl w-auto p-3 drop-shadow-md`}>{props.skill.name}</div>;
+  return (
+    <div className={`${color(props.skill.score)} rounded-3xl w-auto p-3 drop-shadow-md m-1`}>{props.skill.name}</div>
+  );
 };
 
 export default SkillBubble;

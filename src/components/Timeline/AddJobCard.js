@@ -2,7 +2,7 @@ const AddJobCard = (props) => {
   return (
     <div
       className="mb-8 flex justify-between items-center w-full flex-row-reverse left-timeline group pt-7 cursor-default"
-      onClick={props.toggleContact}
+      onClick={!props.showContactCard ? props.toggleContact : null}
     >
       <div className="order-1 w-5/12"></div>
       <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">

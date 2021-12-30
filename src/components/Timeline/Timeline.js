@@ -2,12 +2,15 @@ import { jobs } from "../../utils/constants";
 import JobCard from "./JobCard";
 import VerticalLine from "./VerticalLine";
 import AddJobCard from "./AddJobCard";
+import { Link } from "react-scroll";
 
 const Timeline = (props) => {
   return (
     <div className="">
       <VerticalLine>
-        <AddJobCard toggleContact={props.toggleContact} />
+        <Link activeClass="active" to="profile" spy={true} smooth={true} offset={300} duration={500}>
+          <AddJobCard toggleContact={props.toggleContact} showContactCard={props.showContactCard} />
+        </Link>
 
         {jobs.map((job, index) => (
           <JobCard

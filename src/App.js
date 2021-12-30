@@ -28,7 +28,7 @@ function App() {
           <Timeline selectJob={selectJob} toggleContact={toggleContact} showContactCard={showContactCard} />
         </div>
       </div>
-      <FooterMenuCard className="invisible h-0 md:visible md:h-auto" />
+      <FooterMenuCard className="invisible h-auto md:visible md:h-auto" />
     </div>
   );
 }

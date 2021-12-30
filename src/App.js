@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <div className="h-screen bg-grey md:flex gap-0 ">
+    <div className="h-screen bg-grey md:flex gap-0 scrollbar-hide">
       <div className="flex flex-col p-2 md:w-1/2" id="profile">
         <Profile toggleContact={toggleContact} showContactCard={showContactCard} />
         {showContactCard ? <ContactCard toggleContact={toggleContactCard} /> : <JobCard currentJob={job} />}

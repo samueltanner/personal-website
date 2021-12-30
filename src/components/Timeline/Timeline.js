@@ -6,7 +6,7 @@ import { Link } from "react-scroll";
 
 const Timeline = (props) => {
   return (
-    <div className="">
+    <div className="scrollbar-hide">
       <VerticalLine>
         <Link activeClass="active" to="profile" spy={true} smooth={true} offset={300} duration={500}>
           <AddJobCard toggleContact={props.toggleContact} showContactCard={props.showContactCard} />

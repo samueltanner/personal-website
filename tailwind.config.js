@@ -1,6 +1,16 @@
+const { colors: defaultColors } = require("tailwindcss/defaultTheme");
+
+const colors = {
+  ...defaultColors,
+  ...{
+    "high-green": "#169647",
+  },
+};
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    // colors: colors,
     extend: {
       animation: {
         "fade-in-out-static": "fade-in-out-static 5s ease-in-out",

@@ -10,11 +10,17 @@ import Skills from "./components/Skills/Skills";
 function App() {
   const [job, setCurrentJob] = useState(0);
   const [showContactCard, toggleContactCard] = useState(false);
+  const [currentWindow, setCurrentWindow] = useState("timeline");
   const selectJob = (job) => {
     setCurrentJob(job);
   };
+
   const toggleContact = () => {
     toggleContactCard(!showContactCard);
+  };
+
+  const setWindow = (selection) => {
+    setCurrentWindow(selection);
   };
 
   return (
@@ -25,13 +31,15 @@ function App() {
       </div>
       <div className="mt-3 md:mt-0 flex-1 flex md:overflow-hidden pt-0">
         <div className="relative md:flex-1 mx-auto md:overflow-y-scroll p-0 ">
-          <FooterMenuCard className="z-50 sticky top-3 visible md:hidden mx-3 mt-0" />
-          {/* <Timeline selectJob={selectJob} toggleContact={toggleContact} showContactCard={showContactCard} /> */}
-          <Skills />
+          <FooterMenuCard className="z-50 sticky top-3 visible md:hidden mx-3 mt-0" setWindow={setWindow} />
+          {currentWindow === "skills" && <Skills />}
+          {currentWindow === "timeline" && (
+            <Timeline selectJob={selectJob} toggleContact={toggleContact} showContactCard={showContactCard} />
+          )}
         </div>
       </div>
       <div className="hidden md:block">
-        <FooterMenuCard />
+        <FooterMenuCard setWindow={setWindow} />
       </div>
     </div>
   );

@@ -51,7 +51,9 @@ function App() {
           )}
         </div>
       </div>
-      <div className="hidden md:block ">{/* <FooterMenuCard setCurrentWindow={setWindow} /> */}</div>
+      <div className="hidden md:block ">
+        <FooterMenuCard setCurrentWindow={setWindow} />
+      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import { skills } from "../../utils/constants";
 import SkillBubble from "../UI/SkillBubble";
 import SkillsFilter from "./SkillsFilter";

@@ -21,6 +21,14 @@ function App() {
 
   const setWindow = (selection) => {
     setCurrentWindow(selection);
+
+    if (selection !== "timeline") {
+      toggleContactCard(true);
+    }
+
+    if (selection === "timeline") {
+      toggleContactCard(false);
+    }
   };
 
   return (

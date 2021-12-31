@@ -20,7 +20,7 @@ const FooterMenuCard = (props) => {
 
   return (
     <div
-      className={`bg-slate-200 rounded-xl drop-shadow-lg z-20 left-2 right-2 mx-3 md:left-1/2  md:right-3 md:fixed md:bottom-3 ${props.className} `}
+      className={`bg-slate-200 rounded-xl drop-shadow-lg z-20 left-2 right-2 mx-3 md:left-1/2  md:right-1 md:fixed md:bottom-3 ${props.className} `}
     >
       <div className="flex flex-row gap-6 justify-around p-3 ">
         <button

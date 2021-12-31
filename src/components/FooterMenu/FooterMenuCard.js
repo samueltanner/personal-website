@@ -1,8 +1,15 @@
 import { useState } from "react";
 
 const FooterMenuCard = (props) => {
+  const [selectedOption, setSelectedOption] = useState("timeline");
+
+  const handleSelectWindow = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
   const handleMenuSelection = (event) => {
     props.setWindow(event.target.value);
+    setSelectedOption(event.target.value);
   };
 
   return (
@@ -12,14 +19,14 @@ const FooterMenuCard = (props) => {
       <div className="flex flex-row gap-6 justify-around p-3 ">
         <button
           value="timeline"
-          className={`${props.currentWindow === "timeline" ? "font-bold" : null} w-1/2`}
+          className={`${selectedOption == "timeline" ? "font-bold" : "font-normal"} w-1/2`}
           onClick={handleMenuSelection}
         >
           Work History
         </button>
         <button
           value="skills"
-          className={`${props.currentWindow === "skills" ? "font-bold" : null} w-1/2`}
+          className={`${selectedOption === "skills" ? "font-bold" : "font-normal"} w-1/2`}
           onClick={handleMenuSelection}
         >
           Skills

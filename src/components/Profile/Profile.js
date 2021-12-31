@@ -6,7 +6,7 @@ import LinksContainer from "../LinkBar/LinksContainer";
 
 const Profile = (props) => {
   return (
-    <Card className="flex flex-col mt-auto gap-2  align-baseline bg-slate-200 drop-shadow-lg sm:h-1/2 ">
+    <Card className="flex flex-col mt-auto gap-2 align-baseline bg-slate-200 drop-shadow-lg sm:h-1/2 ">
       <ProfileImage />
       <div className="flex flex-wrap">
         <p className="font-bold ml-2">{profile.name}</p>

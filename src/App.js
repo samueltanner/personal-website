@@ -25,6 +25,7 @@ function App() {
         <ScrollyWindowContainer
           className="relative md:flex-1 w-full md:overflow-y-scroll p-0"
           selectJob={selectJob}
+          showContactCard={showContactCard}
           toggleContact={toggleContact}
         />
       </div>

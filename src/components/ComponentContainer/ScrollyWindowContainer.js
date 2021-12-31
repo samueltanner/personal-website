@@ -9,18 +9,10 @@ const ScrollyWindowContainer = (props) => {
   const setWindow = (selection) => {
     setCurrentWindow(selection);
 
-    if (selection !== "timeline") {
+    if (selection !== "timeline" && !props.showContactCard) {
       props.toggleContact(true);
     }
-
-    if (selection === "timeline") {
-      props.toggleContact(false);
-    }
   };
-
-  // const handleSelectJob = () => {
-  //   props.selectJob();
-  // };
 
   return (
     <div className={`${props.className}`}>

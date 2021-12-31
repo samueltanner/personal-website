@@ -7,12 +7,6 @@ const Skills = (props) => {
   const [showAllSkills, setSkillFilter] = useState(true);
   const [currentSkills, setSkills] = useState(skills);
 
-  skills.sort((a, b) => (a.score > b.score ? -1 : 1));
-
-  // const filteredSkills = () => {
-  //   return skills.sort((a, b) => (a.score > b.score ? -1 : 1)).filter((skill) => skill.dev_skill === true);
-  // };
-
   const toggleSkills = () => {
     setSkillFilter(!showAllSkills);
     setSkills(

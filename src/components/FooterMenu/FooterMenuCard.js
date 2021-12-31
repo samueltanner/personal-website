@@ -1,21 +1,22 @@
 import { useState } from "react";
 
 const FooterMenuCard = (props) => {
-  const [menuItem, setCurrentMenuItem] = useState("");
+  const [menuItem, setCurrentMenuItem] = useState("timeline");
 
-  // const handleMenuSelection = (event) => {
-  //   // setCurrentWindow(event.target.value);
-  //   props.setCurrentWindow(event.target.value);
+  const handleMenuSelection = (event) => {
+    setCurrentMenuItem(event.target.value);
+    props.setCurrentWindow(event.target.value);
+  };
+
+  // const handleSeeTimeline = () => {
+  //   console.log()
+  //   setCurrentMenuItem("timeline");
+  //   // props.setCurrentWindow("timeline");
   // };
-
-  const handleSeeTimeline = () => {
-    setCurrentMenuItem("timeline");
-    // props.setCurrentWindow("timeline");
-  };
-  const handleSeeSkills = () => {
-    setCurrentMenuItem("skills");
-    // props.setCurrentWindow("skills");
-  };
+  // const handleSeeSkills = () => {
+  //   setCurrentMenuItem("skills");
+  //   // props.setCurrentWindow("skills");
+  // };
 
   return (
     <div
@@ -25,14 +26,14 @@ const FooterMenuCard = (props) => {
         <button
           value="timeline"
           className={`${menuItem === "timeline" ? "font-bold" : "font-normal"} w-1/2`}
-          onClick={handleSeeTimeline}
+          onClick={handleMenuSelection}
         >
           Work History
         </button>
         <button
           value="skills"
           className={`${menuItem === "skills" ? "font-bold" : "font-normal"} w-1/2`}
-          onClick={handleSeeSkills}
+          onClick={handleMenuSelection}
         >
           Skills
         </button>

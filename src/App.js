@@ -2,14 +2,11 @@ import { useState } from "react";
 import "./App.css";
 import JobCard from "./components/JobDescription/JobCard";
 import Profile from "./components/Profile/Profile";
-import Timeline from "./components/Timeline/Timeline";
 import ContactCard from "./components/ContactCard/ContactCard";
-import FooterMenuCard from "./components/FooterMenu/FooterMenuCard";
-import Skills from "./components/Skills/Skills";
+import ScrollyWindowContainer from "./components/ComponentContainer/ScrollyWindowContainer";
 
 function App() {
   console.log("app");
-  const [currentWindow, setCurrentWindow] = useState("");
   const [job, setCurrentJob] = useState(0);
   const [showContactCard, toggleContactCard] = useState(false);
   const selectJob = (job) => {
@@ -20,18 +17,6 @@ function App() {
     toggleContactCard(!showContactCard);
   };
 
-  const setWindow = (selection) => {
-    setCurrentWindow(selection);
-
-    if (selection !== "timeline") {
-      toggleContactCard(true);
-    }
-
-    if (selection === "timeline") {
-      toggleContactCard(false);
-    }
-  };
-
   return (
     <div className="h-screen bg-grey md:flex scrollbar-hide">
       <div className="flex flex-col py-3 px-2 md:mr-0 md:ml-2 gap-2 md:w-1/2" id="profile">
@@ -39,21 +24,13 @@ function App() {
         {showContactCard ? <ContactCard toggleContact={toggleContactCard} /> : <JobCard currentJob={job} />}
       </div>
       <div className="mt-3 md:mt-0 flex-1 flex md:overflow-hidden pt-0 px-3">
-        <div className="relative md:flex-1  w-full md:overflow-y-scroll p-0 ">
-          <FooterMenuCard
-            className="z-50 sticky top-3 visible md:hidden mx-3 mt-0 "
-            setCurrentWindow={setWindow}
-            // currentWindow={currentWindow}
-          />
-          {currentWindow === "skills" && <Skills />}
-          {currentWindow === "timeline" && (
-            <Timeline selectJob={selectJob} toggleContact={toggleContact} showContactCard={showContactCard} />
-          )}
-        </div>
+        <ScrollyWindowContainer
+          className="relative md:flex-1 w-full md:overflow-y-scroll p-0"
+          selectJob={selectJob}
+          toggleContact={toggleContact}
+        />
       </div>
-      <div className="hidden md:block ">
-        <FooterMenuCard setCurrentWindow={setWindow} />
-      </div>
+      <div className="hidden md:block ">{/* <FooterMenuCard setCurrentWindow={setWindow} /> */}</div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const FooterMenuCard = (props) => {
-  const [menuItem, setCurrentMenuItem] = useState("timeline");
+  const [menuItem, setCurrentMenuItem] = useState("");
 
   // const handleMenuSelection = (event) => {
   //   // setCurrentWindow(event.target.value);
@@ -10,11 +10,11 @@ const FooterMenuCard = (props) => {
 
   const handleSeeTimeline = () => {
     setCurrentMenuItem("timeline");
-    props.setCurrentWindow("timeline");
+    // props.setCurrentWindow("timeline");
   };
   const handleSeeSkills = () => {
     setCurrentMenuItem("skills");
-    props.setCurrentWindow("skills");
+    // props.setCurrentWindow("skills");
   };
 
   return (

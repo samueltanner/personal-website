@@ -8,9 +8,10 @@ import FooterMenuCard from "./components/FooterMenu/FooterMenuCard";
 import Skills from "./components/Skills/Skills";
 
 function App() {
+  console.log("app");
+  const [currentWindow, setCurrentWindow] = useState("timeline");
   const [job, setCurrentJob] = useState(0);
   const [showContactCard, toggleContactCard] = useState(false);
-  const [currentWindow, setCurrentWindow] = useState("timeline");
   const selectJob = (job) => {
     setCurrentJob(job);
   };
@@ -41,8 +42,8 @@ function App() {
         <div className="relative md:flex-1  w-full md:overflow-y-scroll p-0 ">
           <FooterMenuCard
             className="z-50 sticky top-3 visible md:hidden mx-3 mt-0 "
-            setWindow={setWindow}
-            currentWindow={currentWindow}
+            setCurrentWindow={setWindow}
+            // currentWindow={currentWindow}
           />
           {currentWindow === "skills" && <Skills />}
           {currentWindow === "timeline" && (
@@ -51,7 +52,7 @@ function App() {
         </div>
       </div>
       <div className="hidden md:block ">
-        <FooterMenuCard setWindow={setWindow} currentWindow={currentWindow} />
+        <FooterMenuCard setCurrentWindow={setWindow} />
       </div>
     </div>
   );

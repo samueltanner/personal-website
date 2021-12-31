@@ -37,6 +37,9 @@ const ScrollyWindowContainer = (props) => {
           showContactCard={props.showContactCard}
         />
       )}
+      <div className="hidden md:block ">
+        <FooterMenuCard setCurrentWindow={setWindow} />
+      </div>
     </div>
   );
 };

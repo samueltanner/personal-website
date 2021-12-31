@@ -4,7 +4,6 @@ import JobCard from "./components/JobDescription/JobCard";
 import Profile from "./components/Profile/Profile";
 import ContactCard from "./components/ContactCard/ContactCard";
 import ScrollyWindowContainer from "./components/ComponentContainer/ScrollyWindowContainer";
-
 function App() {
   console.log("app");
   const [job, setCurrentJob] = useState(0);
@@ -30,7 +29,6 @@ function App() {
           toggleContact={toggleContact}
         />
       </div>
-      <div className="hidden md:block ">{/* <FooterMenuCard setCurrentWindow={setWindow} /> */}</div>
     </div>
   );
 }

@@ -81,7 +81,7 @@ const ContactCard = (props) => {
           required
         />
         {/* <div className="fixed bottom-3 inset-x-0 flex flex-wrap justify-center gap-4"> */}
-        <div className="flex flex-wrap mt-auto gap-2 mx-auto align-baseline">
+        <div className="flex flex-row justify-center gap-4 mb-auto ">
           <RectangleButton text="Submit" buttonType={`bg-blue-500  hover:bg-blue-700 drop-shadow-md`} />
           <RectangleButton
             text="Cancel"

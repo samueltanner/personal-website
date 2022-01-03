@@ -3,17 +3,15 @@ import { skills } from "../../utils/constants";
 import SkillBubble from "../UI/SkillBubble";
 import SkillsFilter from "./SkillsFilter";
 
+const sortedSkills = skills.sort((a, b) => (a.score > b.score ? -1 : 1));
+
 const Skills = (props) => {
   const [showAllSkills, setSkillFilter] = useState(true);
-  const [currentSkills, setSkills] = useState(skills);
+  const [currentSkills, setSkills] = useState(sortedSkills);
 
   const toggleSkills = () => {
     setSkillFilter(!showAllSkills);
-    setSkills(
-      !showAllSkills
-        ? skills
-        : skills.sort((a, b) => (a.score > b.score ? -1 : 1)).filter((skill) => skill.dev_skill === true)
-    );
+    setSkills(!showAllSkills ? sortedSkills : sortedSkills.filter((skill) => skill.dev_skill === true));
   };
 
   return (

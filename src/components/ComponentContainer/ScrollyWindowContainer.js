@@ -2,6 +2,7 @@ import { useState } from "react";
 import FooterMenuCard from "../FooterMenu/FooterMenuCard";
 import Skills from "../Skills/Skills";
 import Timeline from "../Timeline/Timeline";
+import Portfolio from "../Portfolio/Portfolio";
 
 const ScrollyWindowContainer = (props) => {
   const [currentWindow, setCurrentWindow] = useState("timeline");
@@ -29,7 +30,8 @@ const ScrollyWindowContainer = (props) => {
           showContactCard={props.showContactCard}
         />
       )}
-      <div className="hidden md:block ">
+      {currentWindow === "portfolio" && <Portfolio />}
+      <div className="hidden md:block">
         <FooterMenuCard setCurrentWindow={setWindow} />
       </div>
     </div>

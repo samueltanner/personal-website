@@ -1,4 +1,7 @@
-let JOBS = [
+import funny_money from "../images/funnymoney.png";
+import job_seeker from "../images/jobseeker.png";
+
+const jobs = [
   {
     company: "Bovisync",
     title: "Web Developer & Project Manager",
@@ -123,7 +126,7 @@ let JOBS = [
   },
 ];
 
-const PROFILE = {
+const profile = {
   name: "Samuel Tanner",
   phone: "360.878.0730",
   email: "samuel.m.s.tanner@gmail.com",
@@ -131,12 +134,12 @@ const PROFILE = {
   blurb: "Entrepreneur and developer. I love turning neat ideas into beautiful realities.",
 };
 
-const LINKS = {
+const links = {
   mail: "mail",
   linkedIn: "https://www.linkedin.com/in/samueltanner/",
   github: "https://github.com/samueltanner",
 };
-const SKILLS = [
+const skills = [
   { name: "Adobe Illustrator", score: 5 },
   { name: "Adobe Lightroom", score: 5 },
   { name: "Adobe Photoshop", score: 5 },
@@ -182,7 +185,59 @@ const SKILLS = [
   { name: "Wire-framing", score: 5, dev_skill: true },
 ];
 
-export const jobs = JOBS;
-export const profile = PROFILE;
-export const links = LINKS;
-export const skills = SKILLS;
+const projects = [
+  {
+    name: "Joe Chocolate Co's Ordering Tracking System",
+    status: "deployed",
+    stack: "Airtable",
+    repoLink: [],
+    description:
+      "The impetus of my love and fascination with software development started when I learned what a relational database was. I needed a more robust order tracking software for my chocolate company but the out of the box solutions wouldn't cut it, so I started building one by myself using Airtable.\n\nIn the end I built a fully operational order and customer tracking database that was extremely easy to use and could handle the extremely cyclical nature of our business.",
+  },
+  {
+    name: "Funny Money",
+    link: "https://funny-money-app.herokuapp.com/#/",
+    repoLink: [
+      "https://github.com/samueltanner/funny-money-frontend",
+      "https://github.com/samueltanner/funny_money_backend",
+    ],
+    status: "deployed",
+    stack: "VueJS, Bootstrap, Rails",
+    description:
+      "My first full-stack project built as a culminating project for my software development bootcamp.\n\nThe vision came from a friend who wanted more visibility into the way his friends invested. Funny Money allows its users to track a portfolio of investments with realtime update from the IEXCloud and Alpha Advantage APIs. From there users could create and join groups where they could see the makeup and % gains (or losses) their friends had made.",
+  },
+  {
+    name: "Job Seeker",
+    link: "https://coding-job-seeker.netlify.app/",
+    repoLink: ["https://github.com/samueltanner/job_seeker_front", "https://github.com/timmsnow/job_seeker"],
+    status: "deployed",
+    stack: "ReactJS, Bootstrap, Rails",
+    description:
+      "Just after I graduated from the software development bootcamp, a buddy and I decided to build an app that would help us get hired. Our first objective was to learn React since it was not apart of our bootcamp curriculum and it was the industry standard; second, we wanted to track the tasks we deemed necessary to land a coding job.\n\n So we built an app that did just that. Job Seeker allows its users to track a variety of metrics like time spent white-boarding, time spent portfolio building, number of informational interviews, number of jobs applied to, a list of all the job postings you've interacted with, and (most importantly) the number of breaks you've taken throughout the day.",
+  },
+  {
+    name: "Diet Tuner",
+    link: "url.com",
+    repoLink: [],
+    status: "deployed privately",
+    stack: "VueJS, Ionic, GraphQL, Django",
+    description:
+      "I was lucky enough to take an idea and build a brand new frontend from scratch as a junior developer. The idea was to create a diet tracker (think, MyFitnessPal) but for cows!\n\nAs I would come to learn, cows' diets can be tracked a lot like a human's, with macro-nutrients like carbohydrates, protein, fat, and fiber. Large farms have dietitians prescribe diets to portions of their herds and then it is the job of the farmhands to use the ingredients they have in stock to try to hit the ideal macro-nutrient rations. Easier said than done for sure. The Diet Tuner application is the visual interface to a very complex Django backend that could take a list of ingredients on hand and create 'tuned' diets that would save farms countless hours and dollars.\n\nI built the front end in Vue.js and utilized Ionic so I could easily compile the project as a progressive web app. I also implemented Vuex for authentication and other needs that required persisted-state.",
+  },
+  {
+    name: "Samuel-Tanner.com",
+    link: "url.com",
+    repoLink: [],
+    status: "deployed",
+    stack: "ReactJS, Context API, Tailwind CSS",
+    description:
+      "My first website was built using a downloadable theme and it didn't ever really feel like me. So I decided to scrap that and build one from scratch. One of my big passions is design and unlike many of the developers I know, I actually enjoy tweaking CSS. I took this project as an opportunity to flesh out my CSS acumen.\n\nThis website was built using React, Context API, and Tailwind CSS. I found using Tailwind to be a breeze (pun intended) and hope I get to use it more in the future!",
+  },
+];
+
+export { jobs, profile, links, skills, projects };
+// export const jobs = JOBS;
+// export const profile = PROFILE;
+// export const links = LINKS;
+// export const skills = SKILLS;
+// export const projects = PROJECTS;

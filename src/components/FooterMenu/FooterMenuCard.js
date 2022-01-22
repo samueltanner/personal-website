@@ -8,16 +8,6 @@ const FooterMenuCard = (props) => {
     props.setCurrentWindow(event.target.value);
   };
 
-  // const handleSeeTimeline = () => {
-  //   console.log()
-  //   setCurrentMenuItem("timeline");
-  //   // props.setCurrentWindow("timeline");
-  // };
-  // const handleSeeSkills = () => {
-  //   setCurrentMenuItem("skills");
-  //   // props.setCurrentWindow("skills");
-  // };
-
   return (
     <div
       className={`bg-slate-200 rounded-xl drop-shadow-lg z-20 left-2 right-2 mx-3 md:left-1/2  md:right-1 md:fixed md:bottom-3 ${props.className} `}
@@ -37,9 +27,13 @@ const FooterMenuCard = (props) => {
         >
           Skills
         </button>
-        {/* <button value="portfolio" onClick={handleMenuSelection}>
+        <button
+          value="portfolio"
+          onClick={handleMenuSelection}
+          className={`${menuItem === "portfolio" ? "font-bold" : "font-normal"} w-1/2`}
+        >
           Portfolio
-        </button> */}
+        </button>
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import GlobalContext from "../Context/global-context";
 
 const FooterMenuCard = (props) => {
-  const [menuItem, setCurrentMenuItem] = useState("timeline");
+  const { currentWindow, setCurrentWindow } = useContext(GlobalContext);
 
   const handleMenuSelection = (event) => {
-    setCurrentMenuItem(event.target.value);
-    props.setCurrentWindow(event.target.value);
+    setCurrentWindow(event.target.value);
   };
 
   return (
@@ -15,22 +15,22 @@ const FooterMenuCard = (props) => {
       <div className="flex flex-row gap-6 justify-around p-3 ">
         <button
           value="timeline"
-          className={`${menuItem === "timeline" ? "font-bold" : "font-normal"} w-1/2`}
+          className={`${currentWindow === "timeline" ? "font-bold" : "font-normal"} w-1/2`}
           onClick={handleMenuSelection}
         >
           Work History
         </button>
         <button
           value="skills"
-          className={`${menuItem === "skills" ? "font-bold" : "font-normal"} w-1/2`}
+          className={`${currentWindow === "skills" ? "font-bold" : "font-normal"} w-1/2`}
           onClick={handleMenuSelection}
         >
           Skills
         </button>
         <button
           value="portfolio"
+          className={`${currentWindow === "portfolio" ? "font-bold" : "font-normal"} w-1/2`}
           onClick={handleMenuSelection}
-          className={`${menuItem === "portfolio" ? "font-bold" : "font-normal"} w-1/2`}
         >
           Portfolio
         </button>

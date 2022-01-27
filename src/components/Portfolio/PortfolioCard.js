@@ -9,8 +9,8 @@ const PortfolioCard = (props) => {
         <li className="mb-2">{props.project.description}</li>
         <li>{props.project.link}</li>
         {/* <li>{props.project.status}</li> */}
-        {props.project.repoLink.map((link) => (
-          <li>{link}</li>
+        {props.project.repoLink.map((link, index) => (
+          <li key={index}>{link}</li>
         ))}
       </ul>
     </Card>

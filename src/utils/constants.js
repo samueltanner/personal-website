@@ -219,8 +219,8 @@ const projects = [
   },
   {
     name: "Diet Tuner",
-    frontEndRepo: "private repo",
-    backEndRepo: "private repo",
+    frontEndRepo: "",
+    backEndRepo: "",
     liveLink: "https://app.diettuner.com/",
     repoLink: [],
     status: "deployed privately",
@@ -232,7 +232,7 @@ const projects = [
     name: "Samuel-Tanner.com",
     frontEndRepo: "https://github.com/samueltanner/personal-website",
     backEndRepo: "",
-    liveLink: "www.samuel-tanner.com",
+    liveLink: "",
     status: "deployed",
     stack: "ReactJS, Context API, Tailwind CSS",
     description:

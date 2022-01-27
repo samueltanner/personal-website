@@ -9,27 +9,35 @@ const PortfolioCard = (props) => {
         <li className="italic text-slate-100 mb-2">{props.project.stack}</li>
         <li className="mb-2">{props.project.description}</li>
         <div className="flex flex-row gap-4 justify-center">
-          <li>
-            <LinkButton
-              buttonText="Live Link"
-              className={"bg-emerald-700 hover:bg-emerald-900 hover:drop-shadow-lg"}
-              link={props.project.liveLink}
-            />
-          </li>
-          <li>
-            <LinkButton
-              buttonText="F/E Repo"
-              className={"bg-gray-500 hover:bg-gray-700 hover:drop-shadow-lg"}
-              link={props.project.frontEndRepo}
-            />
-          </li>
-          <li>
-            <LinkButton
-              buttonText="B/E Repo"
-              className={"bg-gray-500 hover:bg-gray-700 hover:drop-shadow-lg"}
-              link={props.project.backEndRepo}
-            />
-          </li>
+          {props.project.liveLink && (
+            <li>
+              <LinkButton
+                buttonText="Live Link"
+                className={"bg-emerald-700 hover:bg-emerald-900 hover:drop-shadow-lg"}
+                link={props.project.liveLink}
+              />
+            </li>
+          )}
+
+          {props.project.frontEndRepo && (
+            <li>
+              <LinkButton
+                buttonText="F/E Repo"
+                className={"bg-gray-500 hover:bg-gray-700 hover:drop-shadow-lg"}
+                link={props.project.frontEndRepo}
+              />
+            </li>
+          )}
+
+          {props.project.backEndRepo && (
+            <li>
+              <LinkButton
+                buttonText="B/E Repo"
+                className={"bg-gray-500 hover:bg-gray-700 hover:drop-shadow-lg"}
+                link={props.project.backEndRepo}
+              />
+            </li>
+          )}
         </div>
       </ul>
     </Card>

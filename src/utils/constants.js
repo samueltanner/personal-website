@@ -190,17 +190,18 @@ const projects = [
     name: "Joe Chocolate Co's Ordering Tracking System",
     status: "deployed",
     stack: "Airtable",
+    frontEndRepo: "",
+    backEndRepo: "",
+    liveLink: "",
     repoLink: [],
     description:
       "The impetus of my love and fascination with software development started when I learned what a relational database was. I needed a more robust order tracking software for my chocolate company but the out of the box solutions wouldn't cut it, so I started building one by myself using Airtable.\n\nIn the end I built a fully operational order and customer tracking database that was extremely easy to use and could handle the extremely cyclical nature of our business.",
   },
   {
     name: "Funny Money",
-    link: "https://funny-money-app.herokuapp.com/#/",
-    repoLink: [
-      "https://github.com/samueltanner/funny-money-frontend",
-      "https://github.com/samueltanner/funny_money_backend",
-    ],
+    frontEndRepo: "https://github.com/samueltanner/funny-money-frontend",
+    backEndRepo: "https://github.com/samueltanner/funny_money_backend",
+    liveLink: "https://funny-money-app.herokuapp.com/#/",
     status: "deployed",
     stack: "VueJS, Bootstrap, Rails",
     description:
@@ -208,8 +209,9 @@ const projects = [
   },
   {
     name: "Job Seeker",
-    link: "https://coding-job-seeker.netlify.app/",
-    repoLink: ["https://github.com/samueltanner/job_seeker_front", "https://github.com/timmsnow/job_seeker"],
+    frontEndRepo: "https://github.com/samueltanner/job_seeker_front",
+    backEndRepo: "https://github.com/timmsnow/job_seeker",
+    liveLink: "https://coding-job-seeker.netlify.app/",
     status: "deployed",
     stack: "ReactJS, Bootstrap, Rails",
     description:
@@ -217,7 +219,9 @@ const projects = [
   },
   {
     name: "Diet Tuner",
-    link: "url.com",
+    frontEndRepo: "private repo",
+    backEndRepo: "private repo",
+    liveLink: "https://app.diettuner.com/",
     repoLink: [],
     status: "deployed privately",
     stack: "VueJS, Ionic, GraphQL, Django",
@@ -226,8 +230,9 @@ const projects = [
   },
   {
     name: "Samuel-Tanner.com",
-    link: "url.com",
-    repoLink: [],
+    frontEndRepo: "https://github.com/samueltanner/personal-website",
+    backEndRepo: "",
+    liveLink: "www.samuel-tanner.com",
     status: "deployed",
     stack: "ReactJS, Context API, Tailwind CSS",
     description:

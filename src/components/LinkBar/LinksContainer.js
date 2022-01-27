@@ -1,12 +1,8 @@
 import SquareButton from "../UI/SquareButton";
 import { MailIcon, TerminalIcon, UserCircleIcon, ViewListIcon } from "@heroicons/react/outline";
 import { links } from "../../utils/constants";
+import { openLinkInNewTab } from "../helpers/global-functions";
 const LinksContainer = (props) => {
-  const openLinkInNewTab = (url) => {
-    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
-    if (newWindow) newWindow.opener = null;
-  };
-
   return (
     <div className="flex flex-row justify-center gap-4 mt-auto">
       {props.showContactCard ? (

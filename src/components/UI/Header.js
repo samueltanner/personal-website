@@ -6,6 +6,8 @@ const Header = (props) => {
       <ul>
         <li>
           <Link to="/">Home</Link>
+          <br></br>
+          <Link to="/dogs">Dogs</Link>
         </li>
       </ul>
     </div>

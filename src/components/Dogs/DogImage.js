@@ -17,7 +17,7 @@ const DogImage = ({ url }) => {
 
   return (
     <div className="flex flex-col justify-center justify-content-center">
-      <img src={image} alt="Dog" className="object-contain w-96"></img>
+      <img src={image} alt="Dog" className="object-contain w-96 h-96"></img>
       <div className="mx-auto">
         <Button buttonType="bg-[#95A3B8] w-40" text="Woof!" onClick={getImage} />
       </div>

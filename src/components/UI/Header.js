@@ -4,9 +4,8 @@ const Header = (props) => {
   return (
     <div className="w-full bg-slate-800 p-4 text-white">
       <ul>
-        <li>
+        <li className="flex flex-wrap gap-5">
           <Link to="/">Home</Link>
-          <br></br>
           <Link to="/dogs">Dogs</Link>
         </li>
       </ul>

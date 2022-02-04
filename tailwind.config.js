@@ -4,6 +4,7 @@ const colors = {
   ...defaultColors,
   ...{
     "high-green": "#169647",
+    "uplinq-grey": "#232323",
   },
 };
 

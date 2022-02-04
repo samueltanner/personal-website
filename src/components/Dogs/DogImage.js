@@ -16,9 +16,11 @@ const DogImage = ({ url }) => {
   useEffect(getImage, []);
 
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center justify-content-center">
       <img src={image} alt="Dog" className="object-contain w-96"></img>
-      <Button buttonType="bg-[#95A3B8] w-40" text="Woof!" onClick={getImage} />
+      <div className="mx-auto">
+        <Button buttonType="bg-[#95A3B8] w-40" text="Woof!" onClick={getImage} />
+      </div>
     </div>
   );
 };

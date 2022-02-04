@@ -26,3 +26,4 @@ const DogImage = ({ url }) => {
 };
 
 export default DogImage;
+ 

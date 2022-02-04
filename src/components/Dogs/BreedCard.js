@@ -8,4 +8,4 @@ const BreedCard = (props) => {
   );
 };
 
-export default BreedCard;
+export default BreedCard; 

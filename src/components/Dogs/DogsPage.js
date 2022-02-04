@@ -31,4 +31,4 @@ const DogsPage = (props) => {
   );
 };
 
-export default DogsPage;
+export default DogsPage; 

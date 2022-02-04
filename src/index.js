@@ -4,17 +4,13 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import DogsPage from "./components/Dogs/DogsPage";
 
 const Routing = () => {
   return (
     <Router>
-
       <Routes>
         <Route path="/" element={App()} />
-        <Route path="/dogs" element={DogsPage()} />
       </Routes>
-  
     </Router>
   );
 };

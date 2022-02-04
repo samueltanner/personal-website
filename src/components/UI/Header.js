@@ -6,7 +6,7 @@ const Header = (props) => {
       <ul>
         <li className="flex flex-wrap gap-5">
           <Link to="/">Home</Link>
-          <Link to="/dogs">Dogs</Link>
+          {/* <Link to="/dogs">Dogs</Link> */}
         </li>
       </ul>
     </div>

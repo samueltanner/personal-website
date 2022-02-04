@@ -5,19 +5,20 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-const Routing = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={App()} />
-      </Routes>
-    </Router>
-  );
-};
+// const Routing = () => {
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route path="/" element={App()} />
+//         {/* <Route path="/dogs" element={DogsPage()} /> */}
+//       </Routes>
+//     </Router>
+//   );
+// };
 
 ReactDOM.render(
   <React.StrictMode>
-    <Routing />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

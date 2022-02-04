@@ -4,7 +4,7 @@ import JobCard from "./components/JobDescription/JobCard";
 import Profile from "./components/Profile/Profile";
 import ContactCard from "./components/ContactCard/ContactCard";
 import ScrollyWindowContainer from "./components/ComponentContainer/ScrollyWindowContainer";
-import Header from "./components/UI/Header";
+
 function App() {
   const [job, setCurrentJob] = useState(0);
   const [showContactCard, toggleContactCard] = useState(false);

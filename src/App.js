@@ -18,6 +18,7 @@ function App() {
 
   return (
     <div>
+      <Header />
       <div className="h-screen bg-grey md:flex scrollbar-hide">
         <div className="flex flex-col px-2 md:py-3 md:mr-0 md:ml-2 gap-2 md:w-1/2" id="profile">
           <Profile toggleContact={toggleContact} showContactCard={showContactCard} />

@@ -9,17 +9,19 @@ import DogsPage from "./components/Dogs/DogsPage";
 const Routing = () => {
   return (
     <Router>
+
       <Routes>
-        <Route exact path="/" component={App} />
-        <Route path="/dogs" component={DogsPage} />
+        <Route path="/" element={App()} />
+        <Route path="/dogs" element={DogsPage()} />
       </Routes>
+  
     </Router>
   );
 };
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Routing />
   </React.StrictMode>,
   document.getElementById("root")
 );
